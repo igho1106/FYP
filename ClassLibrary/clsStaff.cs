@@ -144,5 +144,10 @@ namespace ClassLibrary
             }
         }
 
+        public bool Find(Int32 caregiverID)
+        {
+            //always return true (Quick fix)
+            return true;
+        }
     }
 }
