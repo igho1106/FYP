@@ -31,7 +31,7 @@ namespace CaregiverTests
         }
 
         [TestMethod]
-        public void CaregiverIDOK()
+        public void StaffIDOK()
         {
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();

@@ -8,13 +8,6 @@ namespace ClassLibrary
         public bool Active { get; set; }
         
         
-       
-        
-       
-        
-        
-        
-
         //private data member for the ManagerID property
         private int mManagerID;
         //private data member for the DOB property
@@ -126,7 +119,7 @@ namespace ClassLibrary
             get
             {
                 //return the private data
-                return mGender;
+                return mHomeAddress;
             }
             set
             {
