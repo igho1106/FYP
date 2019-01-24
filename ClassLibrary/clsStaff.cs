@@ -1,4 +1,5 @@
 ﻿using System;
+//using ClassLibrary;
 
 namespace ClassLibrary
 {
@@ -144,8 +145,10 @@ namespace ClassLibrary
             }
         }
 
-        public bool Find(Int32 caregiverID)
+        public bool FindCaregiverById(Int32 CaregiverID)
         {
+            //clsCaregiver ACaregiver = new clsCaregiver();
+
             //always return true (Quick fix)
             return true;
         }
