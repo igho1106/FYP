@@ -2,7 +2,6 @@
 using ClassLibrary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-
 namespace CaregiverTests
 {
     [TestClass]
@@ -144,13 +143,12 @@ namespace CaregiverTests
         {
             //create an instance of the class we want to create
             clsStaff AStaff = new clsStaff();
-            //clsCaregiver ACaregiver = new clsCaregiver();
             //boolean variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with the method
             Int32 CaregiverID = 1;
             //invoke the method
-            Found = AStaff.FindCaregiverById(CaregiverID);
+            Found = AStaff.Find(CaregiverID);
             //test to see that the result is correct
             Assert.IsTrue(Found);
 
