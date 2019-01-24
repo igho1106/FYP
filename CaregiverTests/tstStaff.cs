@@ -135,28 +135,5 @@ namespace CaregiverTests
         }
 
         //END OF STAFF PROPERTY TEST METHODS
-
-
-        //UNCERTAIN
-        [TestMethod]
-        public void FindMethodOK()
-        {
-            //create an instance of the class we want to create
-            clsStaff AStaff = new clsStaff();
-            //boolean variable to store the result of the validation
-            Boolean Found = false;
-            //create some test data to use with the method
-            Int32 CaregiverID = 1;
-            //invoke the method
-            Found = AStaff.Find(CaregiverID);
-            //test to see that the result is correct
-            Assert.IsTrue(Found);
-
-        }
-
-
-    
-
-
     }
 }
