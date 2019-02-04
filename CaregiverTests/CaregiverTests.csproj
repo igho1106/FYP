@@ -57,7 +57,6 @@
     <Compile Include="tstStaff.cs" />
     <Compile Include="tstManager.cs" />
     <Compile Include="tstValidation.cs" />
-    <Compile Include="tstLogin.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
