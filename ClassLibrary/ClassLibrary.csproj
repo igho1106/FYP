@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="clsCaregiver.cs" />
     <Compile Include="clsClient.cs" />
+    <Compile Include="clsDataConnection.cs" />
     <Compile Include="clsManager.cs" />
     <Compile Include="clsStaff.cs" />
     <Compile Include="clsValidation.cs" />
