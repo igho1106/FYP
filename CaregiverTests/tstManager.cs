@@ -137,6 +137,16 @@ namespace CaregiverTests
         }
 
         //END OF MANAGER PROPERTIES TEST METHODS
+
+        [TestMethod]
+        public void FindMethodOK()
+        {
+            clsManager AUser = new clsManager();
+            Boolean Found = false;
+            int UserID = 1;
+            Found = AUser.Find(UserID);
+            Assert.IsTrue(Found);
+        }
     }
 }
 

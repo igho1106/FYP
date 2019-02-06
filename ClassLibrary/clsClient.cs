@@ -7,19 +7,19 @@ namespace ClassLibrary
         //Client Properties
       
         //private data member for the PhoneNo property
-        private string mCareRequirement;
+        private string mCareRequirements;
 
         public string CareRequirement
         {
             get
             {
                 //return the private data
-                return mCareRequirement;
+                return mCareRequirements;
             }
             set
             {
                 //set the value of the private data member
-                mCareRequirement = value;
+                mCareRequirements = value;
             }
         }
 
