@@ -4,8 +4,7 @@ namespace ClassLibrary
 {
     public class clsStaff : User
     {
-        //Staff Properties
-
+        //Staff Methods
 
         public bool Find(int UserID)
         {
