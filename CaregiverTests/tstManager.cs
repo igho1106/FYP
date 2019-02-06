@@ -32,16 +32,16 @@ namespace CaregiverTests
 
       
         [TestMethod]
-        public void ManagerIDOK()
+        public void UserIDK()
         {
             //create an instance of the class we want to create
             clsManager AManager = new clsManager();
             //create a test data to assign to the property
             int TestData = 1;
             //assign data to the property
-            AManager.ManagerID = TestData;
+            AManager.UserID = TestData;
             //test to see that the two values are the same
-            Assert.AreEqual(AManager.ManagerID, TestData);
+            Assert.AreEqual(AManager.UserID, TestData);
         }
 
         [TestMethod]

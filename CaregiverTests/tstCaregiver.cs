@@ -38,9 +38,9 @@ namespace CaregiverTests
             //create a test data to assign to the property
             int TestData = 1;
             //assign data to the property
-            ACaregiver.CaregiverID = TestData;
+            ACaregiver.UserID = TestData;
             //test to see that the two values are the same
-            Assert.AreEqual(ACaregiver.CaregiverID, TestData);
+            Assert.AreEqual(ACaregiver.UserID, TestData);
         }
 
         [TestMethod]
