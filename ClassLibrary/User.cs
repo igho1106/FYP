@@ -146,5 +146,27 @@ namespace ClassLibrary
                 mPhoneNo = value;
             }
         }
+
+        public string FirstNameValid(string firstName)
+        {
+            String Error = "";
+            DateTime DOBTemp;
+
+            //check the parameters 
+            if (firstName.Length == 0)
+            {
+                //Record/Display error
+                Error = Error + "FirstName field must not be left blank : ";
+            }
+
+            //if the first name is more than 25 characters long
+            if (firstName.Length > 26)
+            {
+                //record the error 
+                Error = Error + "FirstName must not be more than 25 characters";
+            }
+
+            return Error;
+        }
     }
 }
