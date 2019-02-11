@@ -292,6 +292,19 @@ namespace CaregiverTests
             Assert.AreNotEqual(Error, "");
         }
 
+        [TestMethod]
+        public void LastNameMinLessOne()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string lastName = "";
+
+            //invoke the method
+            Error = AUser.FirstNameValid(lastName);
+            Assert.AreNotEqual(Error, "");
+        }
+
     }
 
 }

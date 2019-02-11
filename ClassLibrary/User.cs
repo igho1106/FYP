@@ -149,8 +149,7 @@ namespace ClassLibrary
 
         public string FirstNameValid(string firstName)
         {
-            String Error = "";
-            DateTime DOBTemp;
+            String Error = "";           
 
             //check the parameters 
             if (firstName.Length == 0)
@@ -168,5 +167,27 @@ namespace ClassLibrary
 
             return Error;
         }
+
+        public string LastNameValid(string lastName)
+        {
+
+            String Error = "";
+
+            //check the parameters 
+            if (lastName.Length == 0)
+            {
+                //record the error
+                Error = Error + "LastName field must not be blank : ";
+            }
+            //if lastName is more than 25 characters long
+            if (lastName.Length > 26)
+            {
+                //record the error 
+                Error = Error + "LastName must not be more than 25 characters";
+            }
+            return Error;
+        }
+
+
     }
 }
