@@ -115,146 +115,30 @@ namespace CaregiverTests
 
         //END OF MANAGER PROPERTIES TEST METHODS
 
-        //[TestMethod]
-        //public void FindMethodOK()
-        //{
-        //    User AUser = new User();
-        //    Boolean Found = false;
-        //    int UserID = 1;
-        //    Found = AUser.Find(UserID);
-        //    Assert.IsTrue(Found);
-        //}
 
-        //[TestMethod]
-        //public void TestUserFirstNameFound()
-        //{
-        //    User AUser = new User();
-        //    Boolean Found = false;
-        //    Boolean OK = true;
-        //    int UserID = 1;
-        //    Found = AUser.Find(UserID);
 
-        //    if (AUser.FirstName != "Igho")
-        //    {
-        //        OK = false;
-        //    }
-        //    Assert.IsTrue(OK);
-        //}
+        [TestMethod]
+        public void ValidMethodOK()
+        {
+            clsManager AManager = new clsManager();
+            string Error = "";
+            string firstName = "Igho";
+            string lastName = "Akponah";
+            string homeAddress = "6 Cavendish Mews";
+            string gender = "Male";
+            string emailAddress = "ighoakponah@123.com";
+            string phoneNo = "07397924314";
+            string DOB = "11/06/1989";
+            string careRequirement = "";
 
-        //public void TestUserLastNameFound()
-        //{
-        //    clsManager AManager = new clsManager();
-        //    Boolean Found = false;
-        //    Boolean OK = true;
-        //    int UserID = 1;
-        //    Found = AManager.Find(UserID);
+            //invoke method
+            Error = AManager.Valid(firstName, lastName, gender, emailAddress, homeAddress, DOB, phoneNo, careRequirement);
 
-        //    if (AManager.FirstName != "Akponah")
-        //    {
-        //        OK = false;
-        //    }
-        //    Assert.IsTrue(OK);
-        //}
+            //test to see that the results are correct
+            Assert.AreEqual(Error, "");
+        }
 
-        //public void TestUserGenderFound()
-        //{
-        //    clsManager AManager = new clsManager();
-        //    Boolean Found = false;
-        //    Boolean OK = true;
-        //    int UserID = 1;
-        //    Found = AManager.Find(UserID);
-
-        //    if (AManager.FirstName != "Male")
-        //    {
-        //        OK = false;
-        //    }
-        //    Assert.IsTrue(OK);
-        //}
-
-        //[TestMethod]
-        //public void TestUserPhoneNoFound()
-        //{
-        //    clsManager AManager = new clsManager();
-        //    Boolean Found = false;
-        //    Boolean OK = true;
-        //    int CustomerID = 1;
-        //    Found = AManager.Find(CustomerID);
-
-        //    if (AManager.PhoneNo != "07397924314")
-        //    {
-        //        OK = false;
-        //    }
-        //    Assert.IsTrue(OK);
-        //}
-
-        //[TestMethod]
-        //public void TestUserHomeAddressFound()
-        //{
-        //    clsManager AManager = new clsManager();
-        //    Boolean Found = false;
-        //    Boolean OK = true;
-        //    int CustomerID = 1;
-        //    Found = AManager.Find(CustomerID);
-
-        //    if (AManager.HomeAddress != "6 Cavendish Mews")
-        //    {
-        //        OK = false;
-        //    }
-        //    Assert.IsTrue(OK);
-        //}
-
-        //[TestMethod]
-        //public void TestUserEmailAddressFound()
-        //{
-        //    clsManager AManager = new clsManager();
-        //    Boolean Found = false;
-        //    Boolean OK = true;
-        //    int CustomerID = 1;
-        //    Found = AManager.Find(CustomerID);
-
-        //    if (AManager.EmailAddress != "ighoakponah@123.com")
-        //    {
-        //        OK = false;
-        //    }
-        //    Assert.IsTrue(OK);
-        //}
-
-        //[TestMethod]
-        //public void TestUserDOBFound()
-        //{
-        //    clsManager AManager = new clsManager();
-        //    Boolean Found = false;
-        //    Boolean OK = true;
-        //    int CustomerID = 1;
-        //    Found = AManager.Find(CustomerID);
-
-        //    if (AManager.DOB != Convert.ToDateTime("11/06/1989"))
-        //    {
-        //        OK = false;
-        //    }
-        //    Assert.IsTrue(OK);
-        //}
-
-        //[TestMethod]
-        //public void ValidMethodOK()
-        //{
-        //    clsManager AManager = new clsManager();
-        //    string Error = "";
-        //    string firstName = "Igho";
-        //    string lastName = "Akponah";
-        //    string homeAddress = "6 Cavendish Mews";
-        //    string gender = "Male";
-        //    string emailAddress = "ighoakponah@123.com";
-        //    string phoneNo = "07397924314";
-        //    string DOB = "11/06/1989";
-        //    string careRequirement = "";
-
-        //    //invoke method
-        //    Error = AManager.Valid(firstName, lastName, gender, emailAddress, homeAddress, DOB, phoneNo, careRequirement);
-
-        //    //test to see that the results are correct
-        //    Assert.AreEqual(Error, "");
-        //}
+        //FIRSTNAME
 
         [TestMethod]
         public void FirstNameMinLessOne()
@@ -270,6 +154,113 @@ namespace CaregiverTests
         }
 
         [TestMethod]
+        public void FirstNameMin()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string firstName = "A";
+
+            //invoke the method
+            Error = AUser.FirstNameValid(firstName);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void FirstNameMinPlusOne()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string firstName = "AA";
+
+            //invoke the method
+            Error = AUser.FirstNameValid(firstName);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void FirstNameMax()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            //testdata with 50 chars
+            string firstName = "";
+
+            firstName = firstName.PadRight(50, 'A');
+
+            //invoke the method
+            Error = AUser.FirstNameValid(firstName);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void FirstNameMaxLessOne()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            //testdata with 50 chars
+            string firstName = "";
+
+            firstName = firstName.PadRight(49, 'A');
+
+            //invoke the method
+            Error = AUser.FirstNameValid(firstName);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void FirstNameMaxPlusOne()
+        {
+            User AUser = new User();
+            String Error = "";
+
+
+            string firstName = "";
+
+            firstName = firstName.PadRight(51, 'A');
+
+            //invoke the method
+            Error = AUser.FirstNameValid(firstName);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void FirstNameMid()
+        {
+            User AUser = new User();
+            String Error = "";
+
+
+            string firstName = "";
+
+            firstName = firstName.PadRight(25, 'A');
+
+            //invoke the method
+            Error = AUser.FirstNameValid(firstName);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void FirstNameExtremeMax()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string firstName = "";
+
+            firstName = firstName.PadRight(100, 'A');
+
+            //invoke the method
+            Error = AUser.FirstNameValid(firstName);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        //LASTNAME
+
+        [TestMethod]
         public void LastNameMinLessOne()
         {
             User AUser = new User();
@@ -282,5 +273,544 @@ namespace CaregiverTests
             Assert.AreNotEqual(Error, "");
         }
 
+        [TestMethod]
+        public void LastNameMin()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string lastName = "";
+
+            lastName = lastName.PadRight(1, 'A');
+
+            //invoke the method
+            Error = AUser.LastNameValid(lastName);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void LastNameMinPlusOne()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string lastName = "";
+
+            lastName = lastName.PadRight(2, 'A');
+
+            //invoke the method
+            Error = AUser.LastNameValid(lastName);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void LastNameMid()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string lastName = "";
+
+            lastName = lastName.PadRight(25, 'A');
+
+            //invoke the method
+            Error = AUser.LastNameValid(lastName);
+            Assert.AreEqual(Error, "");
+        }
+
+
+        [TestMethod]
+        public void LastNameMax()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string lastName = "";
+
+            lastName = lastName.PadRight(50, 'A');
+
+            //invoke the method
+            Error = AUser.LastNameValid(lastName);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void LastNameMaxLessOne()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string lastName = "";
+
+            lastName = lastName.PadRight(49, 'A');
+
+            //invoke the method
+            Error = AUser.LastNameValid(lastName);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void LastNameMaxPlusOne()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string lastName = "";
+
+            lastName = lastName.PadRight(51, 'A');
+
+            //invoke the method
+            Error = AUser.LastNameValid(lastName);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void LastNameExtremeMax()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string lastName = "";
+
+            lastName = lastName.PadRight(100, 'A');
+
+            //invoke the method
+            Error = AUser.LastNameValid(lastName);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        //GENDER
+
+        [TestMethod]
+        public void GenderMin()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string gender = "";
+
+            gender = gender.PadRight(1, 'A');
+
+            //invoke the method
+            Error = AUser.GenderValid(gender);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void GenderMinLessOne()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string gender = "";
+
+            gender = gender.PadRight(0, 'A');
+
+            //invoke the method
+            Error = AUser.GenderValid(gender);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void GenderMinPlusOne()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string gender = "";
+
+            gender = gender.PadRight(2, 'A');
+
+            //invoke the method
+            Error = AUser.GenderValid(gender);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void GenderMax()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string gender = "";
+
+            gender = gender.PadRight(25, 'A');
+
+            //invoke the method
+            Error = AUser.GenderValid(gender);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void GenderMaxLessOne()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string gender = "";
+
+            gender = gender.PadRight(24, 'A');
+
+            //invoke the method
+            Error = AUser.GenderValid(gender);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void GenderMaxPlusOne()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string gender = "";
+
+            gender = gender.PadRight(26, 'A');
+
+            //invoke the method
+            Error = AUser.GenderValid(gender);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void GenderExtremeMax()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string gender = "";
+
+            gender = gender.PadRight(50, 'A');
+
+            //invoke the method
+            Error = AUser.GenderValid(gender);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        //EMAILADDRESS
+
+        [TestMethod]
+        public void EmailAddressMin()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string emailAddress = "";
+
+            emailAddress = emailAddress.PadRight(9, 'A');
+
+            //invoke the method
+            Error = AUser.EmailAddressValid(emailAddress);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void EmailAddressMinLessOne()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string emailAddress = "";
+
+            emailAddress = emailAddress.PadRight(8, 'A');
+
+            //invoke the method
+            Error = AUser.EmailAddressValid(emailAddress);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void EmailAddressMinPlusOne()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string emailAddress = "";
+
+            emailAddress = emailAddress.PadRight(10, 'A');
+
+            //invoke the method
+            Error = AUser.EmailAddressValid(emailAddress);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void EmailAddressMid()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string emailAddress = "";
+
+            emailAddress = emailAddress.PadRight(25, 'A');
+
+            //invoke the method
+            Error = AUser.EmailAddressValid(emailAddress);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void EmailAddressMax()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string emailAddress = "";
+
+            emailAddress = emailAddress.PadRight(50, 'A');
+
+            //invoke the method
+            Error = AUser.EmailAddressValid(emailAddress);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void EmailAddressMaxPlusOne()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string emailAddress = "";
+
+            emailAddress = emailAddress.PadRight(51, 'A');
+
+            //invoke the method
+            Error = AUser.EmailAddressValid(emailAddress);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void EmailAddressExtremeMax()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string emailAddress = "";
+
+            emailAddress = emailAddress.PadRight(100, 'A');
+
+            //invoke the method
+            Error = AUser.EmailAddressValid(emailAddress);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        //PHONE NO
+
+        [TestMethod]
+        public void PhoneNoMin()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string phoneNo = "";
+
+            phoneNo = phoneNo.PadRight(11, 'A');
+
+            //invoke the method
+            Error = AUser.PhoneNoValid(phoneNo);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PhoneNoMinLessOne()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string phoneNo = "";
+
+            phoneNo = phoneNo.PadRight(10, 'A');
+
+            //invoke the method
+            Error = AUser.PhoneNoValid(phoneNo);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PhoneNoMinPlusOne()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string phoneNo = "";
+
+            phoneNo = phoneNo.PadRight(12, 'A');
+
+            //invoke the method
+            Error = AUser.PhoneNoValid(phoneNo);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PhoneNoMax()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string phoneNo = "";
+
+            phoneNo = phoneNo.PadRight(11, 'A');
+
+            //invoke the method
+            Error = AUser.PhoneNoValid(phoneNo);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PhoneNoExtremeMax()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string phoneNo = "";
+
+            phoneNo = phoneNo.PadRight(50, 'A');
+
+            //invoke the method
+            Error = AUser.PhoneNoValid(phoneNo);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        //HOMEADDRESS
+
+        [TestMethod]
+        public void HomeAddressMin()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string homeAddress = "";
+
+            homeAddress = homeAddress.PadRight(10, 'A');
+
+            //invoke the method
+            Error = AUser.HomeAddressValid(homeAddress);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void HomeAddressMinLessOne()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string homeAddress = "";
+
+            homeAddress = homeAddress.PadRight(9, 'A');
+
+            //invoke the method
+            Error = AUser.HomeAddressValid(homeAddress);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void HomeAddressMinPlusOne()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string homeAddress = "";
+
+            homeAddress = homeAddress.PadRight(11, 'A');
+
+            //invoke the method
+            Error = AUser.HomeAddressValid(homeAddress);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void HomeAddressMid()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string homeAddress = "";
+
+            homeAddress = homeAddress.PadRight(25, 'A');
+
+            //invoke the method
+            Error = AUser.HomeAddressValid(homeAddress);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void HomeAddressMax()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string homeAddress = "";
+
+            homeAddress = homeAddress.PadRight(50, 'A');
+
+            //invoke the method
+            Error = AUser.HomeAddressValid(homeAddress);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void HomeAddressMaxPlusOne()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string homeAddress = "";
+
+            homeAddress = homeAddress.PadRight(51, 'A');
+
+            //invoke the method
+            Error = AUser.HomeAddressValid(homeAddress);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void HomeAddressMaxLessOne()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string homeAddress = "";
+
+            homeAddress = homeAddress.PadRight(49, 'A');
+
+            //invoke the method
+            Error = AUser.HomeAddressValid(homeAddress);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void HomeAddressExtremeMax()
+        {
+            User AUser = new User();
+            String Error = "";
+
+            string homeAddress = "";
+
+            homeAddress = homeAddress.PadRight(100, 'A');
+
+            //invoke the method
+            Error = AUser.HomeAddressValid(homeAddress);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        //DOB
+
+        [TestMethod]
+        public void DOBMin()
+        {
+            User AUser = new User();
+            String Error = "";
+            DateTime dOB;
+            dOB = DateTime.Now.Date.AddYears(-18);
+
+            dOB = dOB.AddYears(-18);
+
+            //convert the date var to a string var
+            string DOB = dOB.ToString();
+            
+
+            //invoke the method
+            Error = AUser.DOBValid(dOB);
+            Assert.AreEqual(Error, "");
+        }
     }
 }
