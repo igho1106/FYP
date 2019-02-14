@@ -8,11 +8,15 @@ namespace ClassLibrary
 {
     public class User
     {
+        //private data member for the list
+        List<User> mUserList = new List<User>();
+        //private data member thisUser
+        User mThisUser = new User();
         //Manager Properties
-        //public bool Active { get; set; }
+        
 
 
-        //private data member for the ManagerID property
+        //private data member for the UserID property
         private int mUserID;
         //private data member for the DOB property
         private DateTime mDOB;
@@ -144,6 +148,34 @@ namespace ClassLibrary
             {
                 //set the value of the private data member
                 mPhoneNo = value;
+            }
+        }
+
+        public List<User> UserList
+        {
+            get
+            {
+                //return the private data
+                return mUserList;
+            }
+            set
+            {
+                //set the private data
+                mUserList = value;
+            }
+        }
+
+        public User ThisUser
+        {
+            get
+            {
+                //return the private data
+                return mThisUser;
+            }
+            set
+            {
+                //set the private data
+                mThisUser = value;
             }
         }
 

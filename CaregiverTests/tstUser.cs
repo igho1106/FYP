@@ -798,5 +798,67 @@ namespace CaregiverTests
 
 
 
+
+
+
+
+
+
+
+
+        [TestMethod]
+        public void UserListOK()
+        {
+            //create an instance of the class we want to create
+            User AllUsers = new User();
+            //create some test data to assin to the property
+            //in this case the data needs to be a list of objects
+            List<User> TestList = new List<User>();
+            //add an item to the list
+            //create the item of the test data
+            User TestItem = new User();
+            //set its properties 
+            TestItem.UserID = 2;
+            TestItem.FirstName = "John";
+            TestItem.LastName = "Doe";
+            TestItem.Gender = "Male";
+            TestItem.EmailAddress = "abc@123.com";
+            TestItem.HomeAddress = "8 Millstone Lane";
+
+            TestItem.DOB = DateTime.Now.Date;
+            TestItem.PhoneNo = "01234567891";
+            
+            //add the item to the test list
+            TestList.Add(TestItem);
+            //assign the data to the property
+            AllUsers.UserList = TestList;
+            //test to see that the two values are the same
+            Assert.AreEqual(AllUsers.UserList, TestList);
+        }
+
+        [TestMethod]
+        public void ThisUserPropertyOK()
+        {
+            //create an instance of the class we want to create
+            User AllUsers = new User();
+            //create some test data to assin to the property
+            User TestUser = new User();
+            //set its properties 
+            TestUser.UserID = 2;
+            TestUser.FirstName = "John";
+            TestUser.LastName = "Doe";
+            TestUser.Gender = "Male";
+            TestUser.EmailAddress = "abc@123.com";
+            TestUser.HomeAddress = "3 Millstone Lane";
+
+            TestUser.DOB = DateTime.Now.Date;
+            TestUser.PhoneNo = "01234567891";
+
+            //assign the data to the property
+            AllUsers.ThisUser = TestUser;
+            //test to see that the two values are the same
+            Assert.AreEqual(AllUsers.ThisUser, TestUser);
+        }
+
     }
 }
