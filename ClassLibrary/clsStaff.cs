@@ -6,7 +6,7 @@ namespace ClassLibrary
     {
         //Staff Methods
 
-        public bool Find(int UserID)
+        public new bool Find(int UserID)
         {
             clsClient client = new clsClient();
             //create an instance of the data connection

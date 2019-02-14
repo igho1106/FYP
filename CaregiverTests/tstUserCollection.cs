@@ -107,7 +107,7 @@ namespace CaregiverTests
             //create a the item of the test data
             clsUser TestItem = new clsUser();
             //var to store the primary key
-            Int32 PrimaryKey = 1;
+            Int32 PrimaryKey = 0;
             //set its properties 
             TestItem.UserID = 2;
             TestItem.FirstName = "John";
@@ -117,6 +117,15 @@ namespace CaregiverTests
             TestItem.HomeAddress = "8 Millstone Lane";
             TestItem.DOB = DateTime.Now.Date;
             TestItem.PhoneNo = "01234567891";
+
+            string careRequirement = "";
+            careRequirement = careRequirement.PadRight(150, 'A');
+
+            TestItem.CareRequirement = careRequirement;
+            TestItem.Role = 2;
+
+
+            
 
             //set ThisCustomer to the test data
             AllUsers.ThisUser = TestItem;

@@ -12,6 +12,8 @@ namespace ClassLibrary
 
         //private data member for the list
         List<clsUser> mUserList = new List<clsUser>();
+
+
         public List<clsUser> UserList
         {
             get
@@ -78,8 +80,8 @@ namespace ClassLibrary
             DB.AddParameter("@HomeAddress", mThisUser.HomeAddress);
             DB.AddParameter("@DOB", mThisUser.DOB);
             DB.AddParameter("@PhoneNo", mThisUser.PhoneNo);
-            
-
+            DB.AddParameter("@CareRequirement", mThisUser.CareRequirement);
+            DB.AddParameter("@Roles", mThisUser.Role);
             //execute query to return the primary key value
             return DB.Execute("sproc_tblUser_Insert");
         }

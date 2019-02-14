@@ -30,6 +30,12 @@ namespace ClassLibrary
         //private data member for the PhoneNo property
         private string mPhoneNo;
 
+        //private data member for the CareRequirement
+        private string mCareRequirement;
+
+        //private data member for the Role
+        private int mRole;
+
 
 
         public int UserID
@@ -145,6 +151,34 @@ namespace ClassLibrary
             {
                 //set the value of the private data member
                 mPhoneNo = value;
+            }
+        }
+
+        public string CareRequirement
+        {
+            get
+            {
+                //return the private data
+                return mCareRequirement;
+            }
+            set
+            {
+                //set the value of the private data member
+                mCareRequirement = value;
+            }
+        }
+
+        public int Role
+        {
+            get
+            {
+                //return the private data
+                return mRole;
+            }
+            set
+            {
+                //set the value of the private data member
+                mRole = value;
             }
         }
 

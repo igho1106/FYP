@@ -9,7 +9,7 @@ namespace ClassLibrary
         //private data member for the PhoneNo property
         private string mCareRequirements;
 
-        public string CareRequirement
+        public new string CareRequirement
         {
             get
             {
