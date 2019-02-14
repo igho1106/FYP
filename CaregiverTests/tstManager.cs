@@ -142,36 +142,7 @@ namespace CaregiverTests
         }
 
 
-        [TestMethod]
-        public void AddUserOK()
-        {
-            User AllUsers = new User();
-            //create a test item
-            User TestItem = new User();
-            Int32 PrimaryKey = 0;
-            //set its properties
-            TestItem.UserID = 1;
-            TestItem.FirstName = "John";
-            TestItem.LastName = "Doe";
-            TestItem.Gender = "Male";
-            TestItem.EmailAddress = "johndoe@yahoo.com";
-            TestItem.HomeAddress = "1 Millstone Lane";
-            TestItem.DOB = DateTime.Now.AddYears(-29);
-            TestItem.PhoneNo = "07397924314";
-            //set ThisUser to the test data
-            AllUsers.ThisUser = TestItem;
-            //add the record
-            PrimaryKey = AllUsers.AddUser();
-            //set the primary key of the test data
-            TestItem.UserID = PrimaryKey;
-            //find the record
-            AllUsers.ThisUser.Find(PrimaryKey);
-            //test to see that the two values are the same
-            Assert.AreEqual(AllUsers.ThisUser, TestItem);
-
-
-
-        }
+       
 
     }
 

@@ -6,9 +6,10 @@ namespace ClassLibrary
     public class clsManager : User
     {
 
-        
+
         //Manager Methods
-        
+
+
         public bool Find(int UserID)
         {
             clsClient client = new clsClient();
@@ -39,11 +40,9 @@ namespace ClassLibrary
                 //return false indicating a problem
                 return false;
             }
-            
+
 
         }
-
-
 
     }
 }

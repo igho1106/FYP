@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ClassLibrary;
+using System.Collections.Generic;
 
 namespace CaregiverTests
 {
@@ -773,25 +774,6 @@ namespace CaregiverTests
             Assert.AreNotEqual(Error, "");
         }
 
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         //DOB (Unfinished)
 
         [TestMethod]
@@ -812,5 +794,9 @@ namespace CaregiverTests
             Error = AUser.DOBValid(dOB);
             Assert.AreEqual(Error, "");
         }
+
+
+
+
     }
 }
