@@ -12,7 +12,7 @@ namespace CaregiverTests
         public void UserIDK()
         {
             //create an instance of the class we want to create
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             
             //create a test data to assign to the property
             int TestData = 1;
@@ -26,7 +26,7 @@ namespace CaregiverTests
         public void DOBPropertyOK()
         {
             //create an instance of the class we want to create
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             //create a test data to assign to the property
             DateTime TestData = DateTime.Now.Date;
             //assign data to the property
@@ -39,7 +39,7 @@ namespace CaregiverTests
         public void EmailAddressPropertyOK()
         {
             //create an instance of the class we want to create
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             //create a test data to assign to the property
             string TestData = "abc1@yahoo.com";
             //assign data to the property
@@ -52,7 +52,7 @@ namespace CaregiverTests
         public void FirstNamePropertyOK()
         {
             //create an instance of the class we want to create
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             //create a test data to assign to the property
             string TestData = "John";
             //assign data to the property
@@ -65,7 +65,7 @@ namespace CaregiverTests
         public void LastNamePropertyOK()
         {
             //create an instance of the class we want to create
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             //create a test data to assign to the property
             string TestData = "Doe";
             //assign data to the property
@@ -79,7 +79,7 @@ namespace CaregiverTests
         public void GenderPropertyOK()
         {
             //create an instance of the class we want to create
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             //create a test data to assign to the property
             string TestData = "M";
             //assign data to the property
@@ -92,7 +92,7 @@ namespace CaregiverTests
         public void HomeAddressPropertyOK()
         {
             //create an instance of the class we want to create
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             //create a test data to assign to the property
             string TestData = "6 Cavendish Mews";
             //assign data to the property
@@ -105,7 +105,7 @@ namespace CaregiverTests
         public void PhoneNoPropertyOK()
         {
             //create an instance of the class we want to create
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             //create a test data to assign to the property
             string TestData = "0123456789";
             //assign data to the property
@@ -125,7 +125,7 @@ namespace CaregiverTests
         [TestMethod]
         public void FirstNameMinLessOne()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string firstName = "";
@@ -138,7 +138,7 @@ namespace CaregiverTests
         [TestMethod]
         public void FirstNameMin()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string firstName = "A";
@@ -151,7 +151,7 @@ namespace CaregiverTests
         [TestMethod]
         public void FirstNameMinPlusOne()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string firstName = "AA";
@@ -164,7 +164,7 @@ namespace CaregiverTests
         [TestMethod]
         public void FirstNameMax()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             //testdata with 50 chars
@@ -180,7 +180,7 @@ namespace CaregiverTests
         [TestMethod]
         public void FirstNameMaxLessOne()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             //testdata with 50 chars
@@ -196,7 +196,7 @@ namespace CaregiverTests
         [TestMethod]
         public void FirstNameMaxPlusOne()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
 
@@ -212,7 +212,7 @@ namespace CaregiverTests
         [TestMethod]
         public void FirstNameMid()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
 
@@ -228,7 +228,7 @@ namespace CaregiverTests
         [TestMethod]
         public void FirstNameExtremeMax()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string firstName = "";
@@ -245,7 +245,7 @@ namespace CaregiverTests
         [TestMethod]
         public void LastNameMinLessOne()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string lastName = "";
@@ -258,7 +258,7 @@ namespace CaregiverTests
         [TestMethod]
         public void LastNameMin()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string lastName = "";
@@ -273,7 +273,7 @@ namespace CaregiverTests
         [TestMethod]
         public void LastNameMinPlusOne()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string lastName = "";
@@ -288,7 +288,7 @@ namespace CaregiverTests
         [TestMethod]
         public void LastNameMid()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string lastName = "";
@@ -304,7 +304,7 @@ namespace CaregiverTests
         [TestMethod]
         public void LastNameMax()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string lastName = "";
@@ -319,7 +319,7 @@ namespace CaregiverTests
         [TestMethod]
         public void LastNameMaxLessOne()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string lastName = "";
@@ -334,7 +334,7 @@ namespace CaregiverTests
         [TestMethod]
         public void LastNameMaxPlusOne()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string lastName = "";
@@ -349,7 +349,7 @@ namespace CaregiverTests
         [TestMethod]
         public void LastNameExtremeMax()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string lastName = "";
@@ -366,7 +366,7 @@ namespace CaregiverTests
         [TestMethod]
         public void GenderMin()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string gender = "";
@@ -381,7 +381,7 @@ namespace CaregiverTests
         [TestMethod]
         public void GenderMinLessOne()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string gender = "";
@@ -396,7 +396,7 @@ namespace CaregiverTests
         [TestMethod]
         public void GenderMinPlusOne()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string gender = "";
@@ -411,7 +411,7 @@ namespace CaregiverTests
         [TestMethod]
         public void GenderMax()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string gender = "";
@@ -426,7 +426,7 @@ namespace CaregiverTests
         [TestMethod]
         public void GenderMaxLessOne()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string gender = "";
@@ -441,7 +441,7 @@ namespace CaregiverTests
         [TestMethod]
         public void GenderMaxPlusOne()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string gender = "";
@@ -456,7 +456,7 @@ namespace CaregiverTests
         [TestMethod]
         public void GenderExtremeMax()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string gender = "";
@@ -473,7 +473,7 @@ namespace CaregiverTests
         [TestMethod]
         public void EmailAddressMin()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string emailAddress = "";
@@ -488,7 +488,7 @@ namespace CaregiverTests
         [TestMethod]
         public void EmailAddressMinLessOne()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string emailAddress = "";
@@ -503,7 +503,7 @@ namespace CaregiverTests
         [TestMethod]
         public void EmailAddressMinPlusOne()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string emailAddress = "";
@@ -518,7 +518,7 @@ namespace CaregiverTests
         [TestMethod]
         public void EmailAddressMid()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string emailAddress = "";
@@ -533,7 +533,7 @@ namespace CaregiverTests
         [TestMethod]
         public void EmailAddressMax()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string emailAddress = "";
@@ -548,7 +548,7 @@ namespace CaregiverTests
         [TestMethod]
         public void EmailAddressMaxPlusOne()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string emailAddress = "";
@@ -563,7 +563,7 @@ namespace CaregiverTests
         [TestMethod]
         public void EmailAddressExtremeMax()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string emailAddress = "";
@@ -580,7 +580,7 @@ namespace CaregiverTests
         [TestMethod]
         public void PhoneNoMin()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string phoneNo = "";
@@ -595,7 +595,7 @@ namespace CaregiverTests
         [TestMethod]
         public void PhoneNoMinLessOne()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string phoneNo = "";
@@ -610,7 +610,7 @@ namespace CaregiverTests
         [TestMethod]
         public void PhoneNoMinPlusOne()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string phoneNo = "";
@@ -625,7 +625,7 @@ namespace CaregiverTests
         [TestMethod]
         public void PhoneNoMax()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string phoneNo = "";
@@ -640,7 +640,7 @@ namespace CaregiverTests
         [TestMethod]
         public void PhoneNoExtremeMax()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string phoneNo = "";
@@ -657,7 +657,7 @@ namespace CaregiverTests
         [TestMethod]
         public void HomeAddressMin()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string homeAddress = "";
@@ -672,7 +672,7 @@ namespace CaregiverTests
         [TestMethod]
         public void HomeAddressMinLessOne()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string homeAddress = "";
@@ -687,7 +687,7 @@ namespace CaregiverTests
         [TestMethod]
         public void HomeAddressMinPlusOne()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string homeAddress = "";
@@ -702,7 +702,7 @@ namespace CaregiverTests
         [TestMethod]
         public void HomeAddressMid()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string homeAddress = "";
@@ -717,7 +717,7 @@ namespace CaregiverTests
         [TestMethod]
         public void HomeAddressMax()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string homeAddress = "";
@@ -732,7 +732,7 @@ namespace CaregiverTests
         [TestMethod]
         public void HomeAddressMaxPlusOne()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string homeAddress = "";
@@ -747,7 +747,7 @@ namespace CaregiverTests
         [TestMethod]
         public void HomeAddressMaxLessOne()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string homeAddress = "";
@@ -762,7 +762,7 @@ namespace CaregiverTests
         [TestMethod]
         public void HomeAddressExtremeMax()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
 
             string homeAddress = "";
@@ -779,7 +779,7 @@ namespace CaregiverTests
         [TestMethod]
         public void DOBMin()
         {
-            User AUser = new User();
+            clsUser AUser = new clsUser();
             String Error = "";
             DateTime dOB;
             dOB = DateTime.Now.Date.AddYears(-18);
@@ -799,66 +799,6 @@ namespace CaregiverTests
 
 
 
-
-
-
-
-
-
-
-        [TestMethod]
-        public void UserListOK()
-        {
-            //create an instance of the class we want to create
-            User AllUsers = new User();
-            //create some test data to assin to the property
-            //in this case the data needs to be a list of objects
-            List<User> TestList = new List<User>();
-            //add an item to the list
-            //create the item of the test data
-            User TestItem = new User();
-            //set its properties 
-            TestItem.UserID = 2;
-            TestItem.FirstName = "John";
-            TestItem.LastName = "Doe";
-            TestItem.Gender = "Male";
-            TestItem.EmailAddress = "abc@123.com";
-            TestItem.HomeAddress = "8 Millstone Lane";
-
-            TestItem.DOB = DateTime.Now.Date;
-            TestItem.PhoneNo = "01234567891";
-            
-            //add the item to the test list
-            TestList.Add(TestItem);
-            //assign the data to the property
-            AllUsers.UserList = TestList;
-            //test to see that the two values are the same
-            Assert.AreEqual(AllUsers.UserList, TestList);
-        }
-
-        [TestMethod]
-        public void ThisUserPropertyOK()
-        {
-            //create an instance of the class we want to create
-            User AllUsers = new User();
-            //create some test data to assin to the property
-            User TestUser = new User();
-            //set its properties 
-            TestUser.UserID = 2;
-            TestUser.FirstName = "John";
-            TestUser.LastName = "Doe";
-            TestUser.Gender = "Male";
-            TestUser.EmailAddress = "abc@123.com";
-            TestUser.HomeAddress = "3 Millstone Lane";
-
-            TestUser.DOB = DateTime.Now.Date;
-            TestUser.PhoneNo = "01234567891";
-
-            //assign the data to the property
-            AllUsers.ThisUser = TestUser;
-            //test to see that the two values are the same
-            Assert.AreEqual(AllUsers.ThisUser, TestUser);
-        }
-
+   
     }
 }

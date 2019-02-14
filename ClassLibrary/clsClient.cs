@@ -2,7 +2,7 @@
 
 namespace ClassLibrary
 {
-    public class clsClient : User
+    public class clsClient : clsUser
     {
         //Client Properties
       

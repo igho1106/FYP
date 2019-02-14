@@ -2,7 +2,7 @@
 
 namespace ClassLibrary
 {
-    public class clsStaff : User
+    public class clsStaff : clsUser
     {
         //Staff Methods
 

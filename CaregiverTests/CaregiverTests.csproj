@@ -59,6 +59,7 @@
     <Compile Include="tstManager.cs" />
     <Compile Include="tstValidation.cs" />
     <Compile Include="tstUser.cs" />
+    <Compile Include="tstUserCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

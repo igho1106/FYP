@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    public class User
+    public class clsUser
     {
         //private data member for the list
-        List<User> mUserList = new List<User>();
-        //private data member thisUser
-        User mThisUser = new User();
-        //Manager Properties
-        
+      
+      
 
 
         //private data member for the UserID property
@@ -151,40 +148,11 @@ namespace ClassLibrary
             }
         }
 
-        public List<User> UserList
-        {
-            get
-            {
-                //return the private data
-                return mUserList;
-            }
-            set
-            {
-                //set the private data
-                mUserList = value;
-            }
-        }
-
-        public User ThisUser
-        {
-            get
-            {
-                //return the private data
-                return mThisUser;
-            }
-            set
-            {
-                //set the private data
-                mThisUser = value;
-            }
-        }
-
-
 
         //USER VALIDATION
         public string FirstNameValid(string firstName)
         {
-            String Error = "";           
+            String Error = "";
 
             //check the parameters 
             if (firstName.Length == 0)
@@ -342,5 +310,7 @@ namespace ClassLibrary
 
 
         //private 
+             
+
     }
 }

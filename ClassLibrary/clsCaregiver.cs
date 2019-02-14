@@ -2,7 +2,7 @@
 
 namespace ClassLibrary
 {
-    public class clsCaregiver : User
+    public class clsCaregiver : clsUser
     {
         //Caregiver Properties
       

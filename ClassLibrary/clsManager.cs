@@ -3,7 +3,7 @@
 
 namespace ClassLibrary
 {
-    public class clsManager : User
+    public class clsManager : clsUser
     {
 
 
