@@ -113,30 +113,11 @@ namespace CaregiverTests
             Assert.AreEqual(AUser.PhoneNo, TestData);
         }
 
-        //END OF MANAGER PROPERTIES TEST METHODS
+        //END OF USER PROPERTIES TEST METHODS
 
 
 
-        [TestMethod]
-        public void ValidMethodOK()
-        {
-            clsManager AManager = new clsManager();
-            string Error = "";
-            string firstName = "Igho";
-            string lastName = "Akponah";
-            string homeAddress = "6 Cavendish Mews";
-            string gender = "Male";
-            string emailAddress = "ighoakponah@123.com";
-            string phoneNo = "07397924314";
-            string DOB = "11/06/1989";
-            string careRequirement = "";
-
-            //invoke method
-            Error = AManager.Valid(firstName, lastName, gender, emailAddress, homeAddress, DOB, phoneNo, careRequirement);
-
-            //test to see that the results are correct
-            Assert.AreEqual(Error, "");
-        }
+        
 
         //FIRSTNAME
 
