@@ -9,7 +9,7 @@ namespace ClassLibrary
     public class User
     {
         //Manager Properties
-        public bool Active { get; set; }
+        //public bool Active { get; set; }
 
 
         //private data member for the ManagerID property
@@ -147,6 +147,104 @@ namespace ClassLibrary
             }
         }
 
+
+        //private data member for user list
+        List<User> mUserList = new List<User>();
+        //private data member thisUser
+        User mThisUser = new User();
+
+        public User ThisUser
+        {
+            get
+            {
+                //return the private data
+                return mThisUser;
+
+            }
+            set
+            {
+                //set the private data
+                mThisUser = value; 
+            }
+        }
+
+        //public property for the user list
+        public List<User> UserList
+        {
+            get
+            {
+                //return the private data
+                return mUserList;
+            }
+            set
+            {
+                //set the private data
+                mUserList = value;
+            }
+        }
+
+        public int AddUser()
+        {
+            //adds a record to the UserDB based on the values of mThisUser
+            //connect to db
+            clsDataConnection DB = new clsDataConnection();
+            //set the params for the SPROC
+            DB.AddParameter("@FirstName", mThisUser.FirstName);
+            DB.AddParameter("@LastName", mThisUser.LastName);
+            DB.AddParameter("@Gender", mThisUser.Gender);
+            DB.AddParameter("@EmailAddress", mThisUser.EmailAddress);
+            DB.AddParameter("@HomeAddress", mThisUser.HomeAddress);
+            DB.AddParameter("@DOB", mThisUser.DOB);
+            DB.AddParameter("@PhoneNo", mThisUser.PhoneNo);
+            //DB.AddParameter("@CareRequirement", mThisUser.)
+            //DB.AddParameter("@Roles", mThisUser.)
+
+            //execute query to return primary key value
+            return DB.Execute("sproc_tblUser_Insert");
+        }
+
+
+
+        public bool Find(int UserID)
+        {
+            clsClient client = new clsClient();
+            //create an instance of the data connection
+            clsDataConnection DB = new clsDataConnection();
+            //add the parameter for the user id to search for
+            DB.AddParameter("UserID", UserID);
+            //execute the stored procedure
+            DB.Execute("sproc_tblUser_FilterByUserID");
+            //if one record is found there should be either one or zero!
+            if (DB.Count == 1)
+            {
+                //copy the data from the database to the private data members
+                UserID = Convert.ToInt32(DB.DataTable.Rows[0]["UserID"]);
+                FirstName = Convert.ToString(DB.DataTable.Rows[0]["FirstName"]);
+                LastName = Convert.ToString(DB.DataTable.Rows[0]["LastName"]);
+                Gender = Convert.ToString(DB.DataTable.Rows[0]["Gender"]);
+                EmailAddress = Convert.ToString(DB.DataTable.Rows[0]["EmailAddress"]);
+                HomeAddress = Convert.ToString(DB.DataTable.Rows[0]["HomeAddress"]);
+                DOB = Convert.ToDateTime(DB.DataTable.Rows[0]["DOB"]);
+                PhoneNo = Convert.ToString(DB.DataTable.Rows[0]["PhoneNo"]);
+                client.CareRequirement = Convert.ToString(DB.DataTable.Rows[0]["CareRequirements"]);
+                return true;
+            }
+            //if no record was found
+            else
+            {
+                //return false indicating a problem
+                return false;
+            }
+
+
+        }
+
+
+
+
+
+
+        //USER VALIDATION
         public string FirstNameValid(string firstName)
         {
             String Error = "";           
@@ -304,5 +402,8 @@ namespace ClassLibrary
             //return any error messages
             return Error;
         }
+
+
+        //private 
     }
 }
