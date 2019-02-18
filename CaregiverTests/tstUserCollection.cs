@@ -141,6 +141,43 @@ namespace CaregiverTests
         }
 
         //DELETE TEST METHOD
+        [TestMethod]
+        public void DeleteMethodOK()
+        {
+            clsUserCollection AllUsers = new clsUserCollection();
+            clsUser TestItem = new clsUser();
+            Int32 PrimaryKey = 0;
+
+            TestItem.UserID = 2;
+            TestItem.FirstName = "John";
+            TestItem.LastName = "Doe";
+            TestItem.Gender = "Male";
+            TestItem.EmailAddress = "abc@123.com";
+            TestItem.HomeAddress = "8 Millstone Lane";
+            TestItem.DOB = DateTime.Now.Date;
+            TestItem.PhoneNo = "01234567891";
+
+            string careRequirement = "";
+            careRequirement = careRequirement.PadRight(150, 'A');
+
+            TestItem.CareRequirement = careRequirement;
+            TestItem.Role = 2;
+
+            //set thisUser to the test data
+            AllUsers.ThisUser = TestItem;
+            //add the record
+            PrimaryKey = AllUsers.AddUserMethod();
+            //set primary key of test data
+            TestItem.UserID = PrimaryKey;
+            //find record
+            AllUsers.ThisUser.Find(PrimaryKey);
+            //delete record
+            AllUsers.Delete();
+            //now find record
+            Boolean Found = AllUsers.ThisUser.Find(PrimaryKey);
+            //test to see the record was not found
+            Assert.IsFalse(Found);
+        }
 
         //UPDATE TEST METHOD
 
