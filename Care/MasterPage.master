@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        
+        <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar><asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList><asp:ListBox ID="ListBox1" runat="server"></asp:ListBox><asp:RadioButton ID="RadioButton1" runat="server"></asp:RadioButton><asp:CheckBox ID="CheckBox1" runat="server"></asp:CheckBox>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
