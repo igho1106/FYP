@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Care_Website.Admin.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+
+        <link href="css/Admin.css" rel="stylesheet" />
+
+   
+   
+        <ul>
+  <li><a class="active" href="Default.aspx">Home</a></li>
+  <li><a href="AddStaff.aspx">Add Staff</a></li>
+  <li><a href="#">Roles</a></li>
+  <li><a href="#">Contact</a></li>
+  <li><a href="#">About</a></li>
+
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
