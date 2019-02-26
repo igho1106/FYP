@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Care_Website.Admin
+namespace Care_Website.Manager
 {
-    public partial class AddStaff : System.Web.UI.Page
+    public partial class Manager : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

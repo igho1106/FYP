@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Care_Website
+namespace Care_Website.Manager
 {
 
 
-    public partial class dd
+    public partial class Reports
     {
     }
 }

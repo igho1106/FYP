@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Care_Website
+namespace Care_Website.Manager
 {
-    public partial class dd : System.Web.UI.Page
+    public partial class AddClient : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

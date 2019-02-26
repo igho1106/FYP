@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Care_Website.Admin {
+namespace Care_Website.Manager {
     
     
     public partial class AddStaff {

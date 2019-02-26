@@ -95,15 +95,34 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin\AddStaff.aspx" />
-    <Content Include="Admin\css\Admin.css" />
-    <Content Include="Admin\Default.aspx" />
+    <Content Include="Caregiver\Default.aspx" />
+    <Content Include="images\arrows.png" />
+    <Content Include="images\city.jpg" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\slide1.jpg" />
+    <Content Include="images\slide2.jpg" />
+    <Content Include="images\transparent.png" />
+    <Content Include="Manager\AddClient.aspx" />
+    <Content Include="Manager\AddStaff.aspx" />
+    <Content Include="Manager\css\Admin.css" />
+    <Content Include="Manager\css\style.css" />
+    <Content Include="Manager\Default.aspx" />
+    <Content Include="Manager\Reports.aspx" />
+    <Content Include="obj\Debug\Care Website.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Care Website.dll" />
+    <Content Include="obj\Debug\Care Website.pdb" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Caregiver\Care.Master" />
-    <Content Include="Admin\Admin.Master" />
+    <Content Include="Manager\Manager.Master" />
+    <Content Include="obj\Debug\Care Website.csproj.CopyComplete" />
+    <Content Include="obj\Debug\Care Website.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\Care Website.csprojAssemblyReference.cache" />
+    <Content Include="obj\Debug\Care Website.csprojResolveAssemblyReference.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="images\Thumbs.db" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -112,39 +131,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Caregiver\Default.aspx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\AddStaff.aspx.cs">
-      <DependentUpon>AddStaff.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\AddStaff.aspx.designer.cs">
-      <DependentUpon>AddStaff.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Admin.Master.cs">
-      <DependentUpon>Admin.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Admin.Master.designer.cs">
-      <DependentUpon>Admin.Master</DependentUpon>
-    </Compile>
     <Compile Include="Caregiver\Care.Master.cs">
       <DependentUpon>Care.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Caregiver\Care.Master.designer.cs">
       <DependentUpon>Care.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Caregiver\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -153,11 +150,49 @@
     <Compile Include="Caregiver\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Manager\AddClient.aspx.cs">
+      <DependentUpon>AddClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\AddClient.aspx.designer.cs">
+      <DependentUpon>AddClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\AddStaff.aspx.cs">
+      <DependentUpon>AddStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\AddStaff.aspx.designer.cs">
+      <DependentUpon>AddStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Manager.Master.cs">
+      <DependentUpon>Manager.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Manager.Master.designer.cs">
+      <DependentUpon>Manager.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="images\" />
     <Folder Include="js\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Care_Website.Caregiver
+namespace Care_Website.Manager
 {
 
 

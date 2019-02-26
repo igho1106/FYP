@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Care_Website.Admin.Admin" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Manager.master.cs" Inherits="Care_Website.Manager.Manager" %>
 
 <!DOCTYPE html>
 
@@ -10,6 +10,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        
 
 
         <link href="css/Admin.css" rel="stylesheet" />
@@ -17,11 +18,15 @@
    
    
         <ul>
-  <li><a class="active" href="Default.aspx">Home</a></li>
+  <li><a class="active" href="Default.aspx">Dashboard</a></li>
   <li><a href="AddStaff.aspx">Add Staff</a></li>
+  <li><a href="AddClient.aspx">Add Client</a></li>
+  <li><a href="#">Staffs</a></li>
+  <li><a href="#">Clients</a></li>
+  <li><a href="#">Caregivers</a></li>
+  <li><a href="#">Edit User Account</a></li>
+  <li><a href="Reports.aspx">Reports</a></li>
   <li><a href="#">Roles</a></li>
-  <li><a href="#">Contact</a></li>
-  <li><a href="#">About</a></li>
 
 </ul>
 

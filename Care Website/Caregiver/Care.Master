@@ -13,8 +13,10 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/image_slide.js"></script>
-    
-    <asp:ContentPlaceHolder ID="head" runat="server">
+  
+    <asp:ContentPlaceHolder ID="head" runat="server"> 
+        <link href="../Manager/css/Admin.css" rel="stylesheet" />
+        <link href="../Manager/css/style.css" rel="stylesheet" />
     </asp:ContentPlaceHolder>
 </head>
 <body>
@@ -23,7 +25,7 @@
 	<div id="site_content">
       <div id="site_heading">
 	    <h1>Pride Care</h1>	
-	    <h2>Client's well-being ---> #OurPride </h2>
+<%--	    <h2>Client's well-being</h2>--%>
 	  </div><!--close site_heading-->
 	  <div id="header">
 	    <div id="menubar">
@@ -40,8 +42,8 @@
 	    
 		<div id="banner_image">
           <ul class="slideshow">
-            <li class="show"><img width="690" height="250" src="images/slide1.jpg" alt="&quot;Image description here&quot;" /></li>
-            <li><img width="690" height="250" src="images/slide2.jpg" alt="&quot;Image description here&quot;" /></li>
+            <li class="show"><img width="690" height="250" src="../images/slide1.jpg" alt="&quot;Image description here&quot;" /></li>
+            <li><img width="690" height="250" src="../images/slide2.jpg" alt="&quot;Image description here&quot;" /></li>
           </ul>  
 	    </div><!--close banner_image-->	  
 		
