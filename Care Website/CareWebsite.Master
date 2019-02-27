@@ -10,6 +10,22 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        
+
+
+        <link href="Manager/css/Admin.css" rel="stylesheet" />
+
+   
+   
+        <ul>
+  <li><a class="active" href="Default.aspx">Welcome</a></li>
+<%--  <li><a href="">#</a></li>--%>
+  <li><a href="Login.aspx">Register/Log In</a></li>
+  <li><a href="#">Contact Us</a></li>
+  
+
+</ul>
+
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
