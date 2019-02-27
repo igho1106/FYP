@@ -21,11 +21,11 @@
    
         <ul>
   <li><a class="active" href="Default.aspx">Home</a></li>
-  <li><a href="#">Add Caregiver</a></li>
-  <li><a href="#">View Caregivers</a></li>
+  <li><a href="AddCaregiver.aspx">Add Caregiver</a></li>
+  <li><a href="ViewCaregivers.aspx">View Caregivers</a></li>
   <li><a href="#">View/Update Profile</a></li>
   <li><a href="#">View Care Notes</a></li>
-  <li><a href="#">Manage Clients & Caregivers</a></li>
+  <li><a href="Manage.aspx">Manage Clients & Caregivers</a></li>
   <li><a href="#">View Feedbacks</a></li>
 
 </ul>
