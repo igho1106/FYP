@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Care_Website.Caregiver
 {
-    public partial class Care : System.Web.UI.MasterPage
+    public partial class AddNote : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

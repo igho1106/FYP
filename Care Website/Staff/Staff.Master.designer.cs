@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Care_Website.Caregiver {
+namespace Care_Website.Staff {
     
     
-    public partial class Care {
+    public partial class Staff {
         
         /// <summary>
         /// head control.

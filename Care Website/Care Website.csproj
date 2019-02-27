@@ -95,7 +95,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Caregiver\AddNote.aspx" />
     <Content Include="Caregiver\Default.aspx" />
+    <Content Include="Caregiver\FeedbackInquiry.aspx" />
     <Content Include="images\arrows.png" />
     <Content Include="images\city.jpg" />
     <Content Include="images\loading.gif" />
@@ -115,7 +117,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Caregiver\Care.Master" />
     <Content Include="Manager\Manager.Master" />
     <Content Include="obj\Debug\Care Website.csproj.CopyComplete" />
     <Content Include="obj\Debug\Care Website.csproj.CoreCompileInputs.cache" />
@@ -123,6 +124,8 @@
     <Content Include="obj\Debug\Care Website.csprojResolveAssemblyReference.cache" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="images\Thumbs.db" />
+    <Content Include="Caregiver\Care.Master" />
+    <Content Include="Staff\Staff.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -136,6 +139,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Caregiver\AddNote.aspx.cs">
+      <DependentUpon>AddNote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Caregiver\AddNote.aspx.designer.cs">
+      <DependentUpon>AddNote.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Caregiver\Care.Master.cs">
       <DependentUpon>Care.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -149,6 +159,13 @@
     </Compile>
     <Compile Include="Caregiver\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Caregiver\FeedbackInquiry.aspx.cs">
+      <DependentUpon>FeedbackInquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Caregiver\FeedbackInquiry.aspx.designer.cs">
+      <DependentUpon>FeedbackInquiry.aspx</DependentUpon>
     </Compile>
     <Compile Include="Manager\AddClient.aspx.cs">
       <DependentUpon>AddClient.aspx</DependentUpon>
@@ -189,6 +206,13 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Staff\Staff.Master.cs">
+      <DependentUpon>Staff.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\Staff.Master.designer.cs">
+      <DependentUpon>Staff.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="js\" />

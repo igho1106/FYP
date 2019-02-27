@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Care.master.cs" Inherits="Care_Website.Caregiver.Care" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Staff.master.cs" Inherits="Care_Website.Staff.Staff" %>
 
 <!DOCTYPE html>
 
@@ -11,6 +11,8 @@
 <body>
     <form id="form1" runat="server">
 
+        
+
             
 
 
@@ -19,17 +21,17 @@
    
         <ul>
   <li><a class="active" href="Default.aspx">Home</a></li>
-  <li><a href="#">View Schedule</a></li>
-  <li><a href="AddNote.aspx">Add Care Notes</a></li>
-  <li><a href="#">View/Edit Profile</a></li>
-  <li><a href="FeedbackInquiry.aspx">Feedback/Inquiry</a></li>
+  <li><a href="#">Add Caregiver</a></li>
+  <li><a href="#">View Caregivers</a></li>
+  <li><a href="#">View/Update Profile</a></li>
+  <li><a href="#">View Care Notes</a></li>
+  <li><a href="#">Manage Clients & Caregivers</a></li>
+  <li><a href="#">View Feedbacks</a></li>
 
 </ul>
 
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-
-
             </asp:ContentPlaceHolder>
         </div>
     </form>
