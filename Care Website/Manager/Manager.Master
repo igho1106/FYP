@@ -24,7 +24,7 @@
   <li><a href="#">Staffs</a></li>
   <li><a href="#">Clients</a></li>
   <li><a href="#">Caregivers</a></li>
-  <li><a href="#">Edit User Account</a></li>
+  <li><a href="UserManager.aspx">Manage User Account</a></li>
   <li><a href="Reports.aspx">Reports</a></li>
   <li><a href="#">Manage Roles</a></li>
 

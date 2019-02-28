@@ -19,12 +19,23 @@
         <asp:Label ID="Label3" runat="server" Text="Email Address"></asp:Label><br /><asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
         <br />
         <br />
+          <asp:Label ID="Label8" runat="server" Text="Confirm Email Address"></asp:Label><br /><asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+          <br />
+          <br />
+          <asp:Label ID="Label9" runat="server" Text="Password"></asp:Label><br /><asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+           <br />
+          <br />
+          <asp:Label ID="Label10" runat="server" Text="Confirm Password"></asp:Label><br /><asp:TextBox ID="TextBox10" runat="server"></asp:TextBox>
+          <br />
+          <br />
+
         <asp:Label ID="Label4" runat="server" Text="Home Address"></asp:Label><br /><asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
         <br />
         <br />
         <asp:Label ID="Label5" runat="server" Text="Gender"></asp:Label><br /><asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
         <br />
         <br />
+
         <asp:Label ID="Label6" runat="server" Text="Phone Number"></asp:Label><br /><asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
         <br />
         <br />
