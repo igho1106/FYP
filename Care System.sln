@@ -1,19 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaregiverTests", "CaregiverTests\CaregiverTests.csproj", "{9D2FC3BC-F9B8-4905-B3EF-210D8E1B788D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{C8A64DAD-0B4F-4A25-AB45-5E84A73D41A0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App_Data", "App_Data", "{E14E1D2B-48E2-4666-85E8-6884C7D04587}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Care Website", "Care Website\Care Website.csproj", "{1CF56F33-43C4-43BB-A679-9C60E0A8E81E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App_Data", "App_Data", "{5F429016-9190-48AB-8EF7-2650B5C60A29}"
 	ProjectSection(SolutionItems) = preProject
 		App_Data\CareSystem.mdf = App_Data\CareSystem.mdf
 		App_Data\CareSystem_log.ldf = App_Data\CareSystem_log.ldf
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Care Website", "Care Website\Care Website.csproj", "{1CF56F33-43C4-43BB-A679-9C60E0A8E81E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

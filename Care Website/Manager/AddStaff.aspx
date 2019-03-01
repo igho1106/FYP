@@ -10,41 +10,42 @@
           <br />
           <h2>Enter new staff details</h2>
         <br />
-        <asp:Label ID="Label1" runat="server" Text="First Name"></asp:Label><br /><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:Label ID="lblFirstName" runat="server" Text="First Name"></asp:Label><br /><asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
         <br />
         <br />
-        <asp:Label ID="Label2" runat="server" Text="Last Name"></asp:Label><br /><asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:Label ID="lblLastName" runat="server" Text="Last Name"></asp:Label><br /><asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
         <br />
         <br />
-        <asp:Label ID="Label3" runat="server" Text="Email Address"></asp:Label><br /><asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        <asp:Label ID="lblEmailAddress" runat="server" Text="Email Address"></asp:Label><br /><asp:TextBox ID="txtEmailAddress" runat="server"></asp:TextBox>
         <br />
         <br />
-          <asp:Label ID="Label8" runat="server" Text="Confirm Email Address"></asp:Label><br /><asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+          <asp:CompareValidator ID="lblCompareEmail" runat="server" ErrorMessage="Re-enter Email Address"></asp:CompareValidator>
+         <%-- <asp:Label ID="lblConfirmEmail" runat="server" Text=""></asp:Label>--%><br /><asp:TextBox ID="txtConfirmEmail" runat="server"></asp:TextBox>
           <br />
           <br />
-          <asp:Label ID="Label9" runat="server" Text="Password"></asp:Label><br /><asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+          <asp:Label ID="lblRegPassword" runat="server" Text="Password"></asp:Label><br /><asp:TextBox ID="txtRegPassword" runat="server"></asp:TextBox>
            <br />
           <br />
-          <asp:Label ID="Label10" runat="server" Text="Confirm Password"></asp:Label><br /><asp:TextBox ID="TextBox10" runat="server"></asp:TextBox>
+          <asp:CompareValidator ID="lblCompareRegPasword" runat="server" ErrorMessage="Re-enter Password"></asp:CompareValidator>
+          <%--<asp:Label ID="lblRegConfirmPassword" runat="server" Text="Confirm Password"></asp:Label>--%><br /><asp:TextBox ID="txtRegConfirmPassword" runat="server"></asp:TextBox>
           <br />
           <br />
 
-        <asp:Label ID="Label4" runat="server" Text="Home Address"></asp:Label><br /><asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+        <asp:Label ID="lblHomeAddress" runat="server" Text="Home Address"></asp:Label><br /><asp:TextBox ID="txtHomeAddress" runat="server"></asp:TextBox>
         <br />
         <br />
-        <asp:Label ID="Label5" runat="server" Text="Gender"></asp:Label><br /><asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+        <asp:Label ID="lblGender" runat="server" Text="Gender"></asp:Label><br /><asp:TextBox ID="txtGender" runat="server"></asp:TextBox>
         <br />
         <br />
 
-        <asp:Label ID="Label6" runat="server" Text="Phone Number"></asp:Label><br /><asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+        <asp:Label ID="lblPhoneNumber" runat="server" Text="Phone Number"></asp:Label><br /><asp:TextBox ID="txtPhoneNumber" runat="server"></asp:TextBox>
+        <br />
+          <br />
         <br />
         <br />
-        <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label><br /><asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
         <br />
         <br />
-        <br />
-        <br />
-        <asp:Button ID="Button1" runat="server" Text="Clear" />      &nbsp;<asp:Button ID="Button2" runat="server" Text="Submit" />
+        <asp:Button ID="btnClear" runat="server" Text="Clear" />      &nbsp;<asp:Button ID="btnSubmit" runat="server" Text="Add Staff" OnClick="btnSubmit_Click" />
     </div>
 
 </asp:Content>
